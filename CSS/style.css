@@ -1,0 +1,47 @@
+/* Selectors */
+/* Basic Selectors
+Element Selector: Selects all elements of a given type.    
+p{
+    color:blue;
+}
+
+ID Selector: Selects an element with a specific ID.
+#para1{
+    color:red;
+}
+
+Class Selector: Selects all elements with a specific class.
+.paragraph{
+    color:yellow;
+}
+*/
+
+/* Advanced Selectors
+Universal Selectors: Selects all elements.
+*{
+    color:purple;
+}
+
+Descendant Selector: Selects all elements that are descendants of a specified element.
+div p{
+    color:orange;
+}
+
+Child Selector: Selects all elements that are the children of a specified element.
+div > p{
+    color:blue;
+}
+
+Adjacent Sibling Selector: Selects all elements that are the adjacent siblings of a specified element.
+div + p{
+    color:green;
+}
+
+Attribute Selector: Selects elements with a specified attribute.
+a[target]{
+    color:red;
+}
+*/
+p{
+    color:green;
+}
