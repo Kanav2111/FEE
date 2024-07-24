@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav{
+  background-color: rgb(103, 27, 21);
+  display: flex;
+}
+nav ul{
+  padding: 10px;
+  display: flex;
+  list-style: none;
+  margin: 0 0 0 50px;
+}
+nav ul li a{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30.4px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.heading{
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 77vw;
+  background-color: rgb(219, 159, 221);
+  font-family: Arial, Helvetica, sans-serif;
+  color: blue;
+}
+.heading p{
+  color: black;
+}
+.container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(337px, 3fr));
+}
+.container div {
+  display: flex;
+  justify-content: center; 
+  margin: 0;
+  padding: 0;
+}
+.pic{
+  border-radius: 8px;
+  height: 200px;
+  width: 337px;
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  display: block;
+}
+.pic:hover{
+  opacity: 0.3;
+}
+.container grid-item{
+  position: relative;
+  overflow: hidden;
+}
+.bi-camera-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.grid-item:hover .bi-camera-overlay {
+  display: flex;
+  opacity: 1;
+}
+.pic:hover {
+  opacity: 0.3;
+}
