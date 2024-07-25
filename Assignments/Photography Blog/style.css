@@ -67,12 +67,12 @@ nav ul li a{
   height: 200px;
   width: 337px;
   opacity: 1;
-  transition: .5s ease;
+  transition: .15s ease, .15s opacity;
   backface-visibility: hidden;
   display: block;
 }
 .pic:hover{
-  opacity: 0.3;
+  opacity: 0.6;
 }
 .container grid-item{
   position: relative;
@@ -92,14 +92,14 @@ nav ul li a{
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.6s ease;
 }
 .grid-item:hover .bi-camera-overlay {
   display: flex;
   opacity: 1;
 }
 .pic:hover {
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 @media screen and (orientation: landscape) {
