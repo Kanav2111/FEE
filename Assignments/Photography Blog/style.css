@@ -6,6 +6,7 @@
 nav{
   background-color: rgb(103, 27, 21);
   display: flex;
+  width: 100%;
 }
 nav ul{
   padding: 10px;
@@ -32,17 +33,36 @@ nav ul li a{
   color: black;
 }
 .container {
-  margin: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(337px, 3fr));
+  margin-top: 0;
+  margin-left: 150px;
+  margin-right: 150px;
+  column-gap: -5px;
+  row-gap: 10px;
 }
 .container div {
-  display: flex;
-  justify-content: center; 
-  margin: 0;
-  padding: 0;
+  width: 337px;
+  height: 200px;
+  position: relative;
+}
+
+.container div .fa-camera {
+  z-index: 50;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.container div:hover .fa-camera {
+  opacity: 1;
 }
 .pic{
+  z-index: 10;
   border-radius: 8px;
   height: 200px;
   width: 337px;
@@ -80,4 +100,21 @@ nav ul li a{
 }
 .pic:hover {
   opacity: 0.3;
+}
+
+@media screen and (orientation: landscape) {
+  .grid-item .bi-camera-overlay {
+    font-size: 2rem;
+  }
+}
+
+@media screen and(max-width: 600px){
+  .grid-container{
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+@media screen and(max-width: 400px){
+  .grid-container{
+    grid-template-columns: 1fr;
+  }
 }
