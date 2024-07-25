@@ -25,7 +25,7 @@ nav ul li a{
   padding: 20px;
   margin: 20px auto;
   width: 77vw;
-  background-color: rgb(219, 159, 221);
+  background-color: rgb(239, 226, 226);
   font-family: Arial, Helvetica, sans-serif;
   color: blue;
 }
@@ -53,13 +53,12 @@ nav ul li a{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3em;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, font-size 0.2s ease;
 }
-
 .container div:hover .fa-camera {
   opacity: 1;
+  font-size: 3em;
 }
 .pic{
   z-index: 10;
@@ -101,7 +100,6 @@ nav ul li a{
 .pic:hover {
   opacity: 0.6;
 }
-
 @media screen and (orientation: landscape) {
   .grid-item .bi-camera-overlay {
     font-size: 2rem;
