@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM EVENTS</title>
+</head>
+<body>
+  <!-- <script src="1.script.js"></script> -->
+  
+  <!-- Inline event -->
+   <p>This is a paragraph</p>
+  <button>Click Me</button>
+  <button>Click Me</button>
+  <button>Click Me</button>
+  <button>Click Me</button>
+
+  <script>
+    var btns = document.querySelectorAll("button");
+    for (let btn of btns) {
+      btn.onclick = myfunc;
+      btn.onclick = helloFunc;
+
+      btn.addEventListener('click', myfunc);
+      btn.addEventListener('click', helloFunc);
+      // btn.onmouseenter = function() {
+      //   console.log('Mouse Enter');
+      // }
+    }
+
+    function myfunc() {
+      console.log('Button Clicked');
+    }
+
+    function helloFunc(){
+      console.log('hello');
+    }
+
+    var p = document.querySelector('p');
+    
+    p.addEventListener('mouseover', function() {
+      console.log('Over the paragraph');
+    });
+
+    
+  </script>
+
+  <!-- Create a box and a button, RGB color heading, and take input field rgb value by clicking the button will be passed in the input field and the box background color will be changed accordingly also the heading will be changed as per the input field -->
+</body>
+</html>

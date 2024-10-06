@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms Event</title>
+</head>
+<body>
+  
+  <form action="/action">
+    <p></p>
+    <input type="text" placeholder="Username">
+    <button>Submitted</button>
+  </form>
+
+  <script>
+    /*
+    // 1. restricting the default behavior of the form
+    let form = document.querySelector('form');
+
+    form.addEventListener("click", function(e){
+      console.log(e);
+      event.preventDefault();
+      console.log('Form Submitted');
+    })
+    // console.log(e);
+    */
+
+    // 2. Accessing form data
+    // let form = document.querySelector('form');
+
+    // form.addEventListener("click", function(e){
+    //   let inp = document.querySelector('input');
+    //   console.dir(inp);
+    //   console.dir(inp.value);
+    //   event.preventDefault();
+    // })
+
+
+    // 3. Passing input data to paragraphs
+    let form = document.querySelector('form');
+    form.addEventListener("submit", function(e){
+      let inp = document.querySelector('input');
+      let p = document.querySelector('p');
+      p.innerText = inp.value;
+      event.preventDefault();
+    });
+
+
+  </script>
+</body>
+</html>

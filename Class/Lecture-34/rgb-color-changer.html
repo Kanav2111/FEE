@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RGB Color Changer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .rgb-box {
+      width: 6.25rem;
+      height: 6.25rem;
+      background-color: #f0f0f0;
+      margin: 1.5rem auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input {
+      padding: 0.625rem;
+      margin: 0.625rem 0;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: .75rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: rgb(76, 175, 80);
+      color: white;
+      border: none;
+      border-radius: 0.25rem;
+      transition: 0.15s all;
+    }
+
+    button:hover {
+      background-color: rgb(56, 135, 60);
+    }
+
+    button:active {
+      background-color: rgb(46, 125, 50);
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="heading">RGB Color Changer</h1>
+  <div class="rgb-box" id="colorBox"></div>
+
+  <input type="text" id="rgbInput" placeholder="value eg: 255, 0, 0">
+  <button id="changeColorBtn">Change Color</button>
+
+  <script>
+    var button = document.getElementById('changeColorBtn');
+    var rgbBox = document.getElementById('colorBox');
+    var heading = document.getElementById('heading');
+    
+    button.addEventListener('click', function () {
+      var rgbValue = 'rgb(' + document.getElementById('rgbInput').value + ')';
+      
+      rgbBox.style.backgroundColor = rgbValue;
+      
+      heading.style.color = rgbValue;
+    });
+  </script>
+</body>
+
+</html>
